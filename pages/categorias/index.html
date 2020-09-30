@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<title>Orgafin</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../css/materialize.min.css">
+<link rel="stylesheet" href="../../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+    <div class="row" id="m0">
+        
+        <div class="col s12 l2 blue" id="menu">
+            <div id="item-menu">
+              <b class="white-text" id="title">Orgafin</b>
+              <a href="../home/index.html" id="btn" class="blue btn-small">
+                <i id="icon" class="material-icons">assessment</i>
+                <div id="text" >Home</div>
+              </a>
+              <a href="../categorias/index.html" id="btn" class="blue darken-4 btn-small">
+                <i id="icon" class="material-icons">local_offer</i>
+                <div id="text" >Categorias</div>
+              </a>
+              <a href="../movimentações/index.html" id="btn" class="blue btn-small">
+                <i id="icon" class="material-icons">monetization_on</i>
+                <div id="text" >Movimentações</div>
+              </a>
+            </div>
+
+            <div id="item-menu">
+                <a id="btn" class="blue btn-small">
+                  <i id="icon" class="material-icons">chat</i>
+                  <div id="text" >Fale conosco</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col s12 l10 grey lighten-4" id="content" >
+            <h5 class="blue-text text-darken-4"> Veja ou casdastre suas categorias</h5>
+            <div class="card white zdepth-3" id="card">
+                <form>
+                    <div  class="card-content black-text">
+                    <div class="input-field col s12 l6">
+                        <input id="nomeCat" type="text" class="validate">
+                        <label id="textForm" for="nomeCat">Nome da categoria</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                      <p>
+                          <label>
+                            <input name="tipoCat" type="radio" id="Entrada" value="entrada" checked />
+                            <span for="Entrada"id="textForm">Entrada</span>
+                          </label>
+                      </p>
+                      <p>
+                          <label>
+                            <input name="tipoCat" type="radio" id="Saída" value="saida"/>
+                            <span id="textForm" for="Saída">Saída</span>
+                          </label>
+                      </p>
+                    </div>
+                    </div>
+
+                    <div class="card-action" id="btnC">
+                        <button id="textForm" class="btn waves-effect blue darken-4" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 l3">
+                  <div class="card-panel blue darken-4">
+                    <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                      Tipo: mensal
+                    </span>
+                  </div>
+                </div>
+                <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col s12 l3">
+                    <div class="card-panel blue darken-4">
+                      <span class="white-text" id="spanText">Pelada na casa do Luiz<br/>
+                        Tipo: mensal
+                      </span>
+                    </div>
+                  </div>
+            </div>
+            
+            
+  
+        </div>
+
+        
+    </div>
+
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+
+
+  $(document).ready(function() {
+    M.updateTextFields();
+  });
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<title>Ografin</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../css/materialize.css">
+<link rel="stylesheet" href="../../js/materialize.js">
+<link rel="stylesheet" href="./styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<body>
+    <div class="row" id="m0">
+        <form method="post" name="formLogin" action="../../php/login.php" enctype = "multipart/form-data">
+            <div class="col s12 l10 grey lighten-4 push-l2" id="content" >
+                <b class="blue-text text-darken-4" id="title">Orgafin</b>
+                <span id="text" class="black-text">E-mail:</span>
+                
+                <input name="emailLogin" type="email" id="login">
+                
+                <span id="text" class="black-text">Senha:</span>
+                
+                <input name="senhaLogin"type="password" id="login">
+                
+                <input type="submit" class="btn-small white-text blue" value="Logar"> 
+            </div>
+        </form>
+        <form method="post" name="formCadastro" action="../../php/cadastro.php" enctype = "multipart/form-data">
+            <div class="col s12 l2 blue pull-l10" id="content">
+                <span id="text" class="white-text">Ainda não possui cadastro?</span>
+                <span id="text" class="white-text">E-mail:</span>
+                
+                <input name="emailCadastro" type="email" id="cadastro">
+                
+                <span id="text" class="white-text">Senha:</span>
+                
+                <input name="senhaCadastro" type="password" id="cadastro">
+                
+                <input type="submit" class="btn-small black-text white" value="Cadastrar">
+        </form>
+            </div>
+        
+    </div>
+
+    
+
+</body>
+</html>

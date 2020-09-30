@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body, #root{
+    height: 100%;
+}
+#m0{
+    margin: 0px 0px;
+}
+#title{
+    font-size: 200px;
+}
+#text{
+    font-size: 20px;
+}
+#content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cadastro{
+    border-radius: 10px;
+    background-color: #fff;
+    height: 30px;
+    
+}
+#login{
+    border-radius: 10px;
+    background-color: #90caf9;
+    height: 30px;
+    border: none;
+    width: 50%;
+    
+}
+@media (max-width: 992px) {
+    #content {
+        height: 50vh;
+        min-height: 487px;
+    }
+    #cadastro{
+        width: 50%;
+    }
+}
