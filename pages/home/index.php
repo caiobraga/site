@@ -24,6 +24,10 @@
                   <i id="icon" class="material-icons">monetization_on</i>
                   <div id="text" >Movimentações</div>
                 </a>
+                <a href="../cadastroTipo/index.php" id="btn" class="blue btn-small">
+                  <i id="icon" class="material-icons">monetization_on</i>
+                  <div id="text" >Tipo Movimentacao</div>
+                </a>
             </div>
 
             <div id="item-menu">
@@ -45,12 +49,45 @@
                     </div>
 
                     <div class="input-field col s12 l3">
-                        <select name="tipoMov"class="select-dropdown dropdown-trigger">
-                            <option value="" disabled selected>Contas da casa</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
+                          <select name="tipoMov"class="select-dropdown dropdown-trigger">  
+                            <?php 
+                            $host = "localhost";
+                            $username = "root";
+                            $password = "";
+                            $db = "orgafin";
+                            
+                            $conexao = mysqli_connect($host,$username,$password) or die("Impossível Conectar"); 
+                             
+                            mysqli_select_db( $conexao, $db) or die("Impossível Conectar na tabela"); 
+                            $query = sprintf("SELECT id, nome FROM tipomov");
+                                    // executa a query
+                                    $dados = mysqli_query($conexao, $query) or die(mysqli_error($conexao));
+                                    // transforma os dados em um array
+                                    $linha = mysqli_fetch_assoc( $dados);
+                                    // calcula quantos dados retornaram
+                                    $total = mysqli_num_rows($dados);
+                            
+                                 // se o número de resultados for maior que zero, mostra os dados
+                                 if($total > 0) {
+                                  // inicia o loop que vai mostrar todos os dados
+                                  do {
+                                    
+                            
+                                // finaliza o loop que vai mostrar os dados
+                            
+                               echo(' 
+                                
+                                  <option value="'.$linha["id"].'">'.$linha["nome"].'</option>
+                                      
+                               '
+                              );//fim do echo
+                            
+                              }while($linha = mysqli_fetch_assoc($dados));
+                              // fim do if
+                             
+                              }
+                              ?>
+                               </select>
                         <label id="textForm" >Categoria da movimentação</label>
                     </div>
 
